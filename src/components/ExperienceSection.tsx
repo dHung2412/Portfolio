@@ -77,6 +77,25 @@ export function ExperienceSection() {
                     {exp.description}
                   </p>
 
+                  {/* Tech Stack Badges */}
+                  {exp.techStack && exp.techStack.length > 0 && (
+                    <div>
+                      <div className="text-[11px] font-mono font-bold uppercase text-neutral-600 mb-1.5">
+                        Hạ tầng công nghệ (Tech Stack):
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {exp.techStack.map((tech, tIdx) => (
+                          <span
+                            key={tIdx}
+                            className="px-2.5 py-1 text-xs font-mono font-bold bg-neutral-100 text-black border-2 border-black shadow-[2px_2px_0px_#000000]"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Achievements */}
                   <div className="space-y-2 pt-2 border-t border-neutral-200">
                     <div className="text-xs font-mono font-bold uppercase text-neutral-600 flex items-center gap-1.5">

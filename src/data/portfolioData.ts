@@ -24,6 +24,7 @@ export interface ExperienceItem {
   company: string;
   description: string;
   achievements: string[];
+  techStack?: string[];
   color: "red" | "blue" | "yellow" | "green";
 }
 
@@ -172,14 +173,15 @@ export const portfolioData = {
   ] as ProjectItem[],
   experiences: [
     {
-      period: "2025 - Hiện tại",
-      role: "Data Platform Engineer",
-      company: "Data & Cloud Engineering Group",
-      description: "Thiết kế, xây dựng và vận hành các pipeline dữ liệu quy mô lớn, tối ưu hóa kho dữ liệu và hỗ trợ đội ngũ Business Intelligence.",
+      period: "03/2026 - Hiện tại",
+      role: "Data Engineer",
+      company: "Công ty TNHH Ami Group",
+      description: "Xây dựng, vận hành và tối ưu hóa nền tảng hạ tầng dữ liệu phân tán (Lakehouse), triển khai các pipeline xử lý dữ liệu và hệ thống truy vấn phân tích hiệu năng cao.",
+      techStack: ["HDFS", "MinIO", "Iceberg", "Polaris", "Doris", "Airflow", "K8s", "Spark"],
       achievements: [
-        "Xây dựng pipeline ingestion tự động thu thập dữ liệu từ 6 nguồn cơ sở dữ liệu về S3 Data Lake.",
-        "Tối ưu thời gian chạy các truy vấn SQL phân tích giảm trung bình 35% trên PostgreSQL/Athena.",
-        "Đóng gói các tác vụ xử lý dữ liệu bằng Docker container và quản lý luồng bằng Airflow."
+        "Xây dựng kiến trúc dữ liệu Lakehouse sử dụng Apache Iceberg và Polaris Catalog trên tầng lưu trữ MinIO / HDFS.",
+        "Thiết lập và vận hành các tác vụ xử lý dữ liệu phân tán với Apache Spark chạy trên cụm Kubernetes (K8s).",
+        "Tự động hóa lịch trình điều phối pipeline qua Apache Airflow và phục vụ truy vấn OLAP hiệu năng cao bằng Apache Doris."
       ],
       color: "blue"
     },
