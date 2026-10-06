@@ -46,7 +46,7 @@ export const portfolioData = {
     name: "Đặng Ngọc Hưng (Deck)",
     role: "Data Platform Engineer",
     tagline: "Thiết kế, triển khai và vận hành hạ tầng dữ liệu, pipeline ETL/ELT và nền tảng phân tích đám mây.",
-    status: "Đang nhận dự án mới",
+    status: "Đang tìm kiếm cơ hội mới",
     location: "Hà Nội, Việt Nam",
     experienceYears: 1,
     completedProjects: 8,
