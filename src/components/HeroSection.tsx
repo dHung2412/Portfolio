@@ -102,10 +102,7 @@ export function HeroSection() {
 
           {/* Right Column: Minifig Avatar Display */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center">
-            <div className="relative p-5 bg-[#3b7c32] border-4 border-black rounded-sm shadow-[8px_8px_0px_#000000] w-full max-w-md flex flex-col items-center">
-              <div className="text-center font-mono font-bold text-xs text-white uppercase mb-3 bg-black/50 py-1 px-3 border border-black w-full">
-                MÔ HÌNH NHÂN VẬT ĐẠI DIỆN (MINIFIGURE)
-              </div>
+            <div className="relative p-5 bg-[#0055BF] border-4 border-black rounded-sm shadow-[8px_8px_0px_#000000] w-full max-w-md flex flex-col items-center">
               <MinifigAvatar />
             </div>
           </div>
