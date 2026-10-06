@@ -184,18 +184,6 @@ export const portfolioData = {
         "Tự động hóa lịch trình điều phối pipeline qua Apache Airflow và phục vụ truy vấn OLAP hiệu năng cao bằng Apache Doris."
       ],
       color: "blue"
-    },
-    {
-      period: "2024 - 2025",
-      role: "Associate Data Engineer / Cloud Intern",
-      company: "Tech Solutions Vietnam",
-      description: "Tham gia phát triển các script ETL xử lý dữ liệu với Python, viết các câu lệnh SQL biến đổi dữ liệu và hỗ trợ vận hành dịch vụ đám mây AWS.",
-      achievements: [
-        "Viết hơn 20 script Python xử lý và làm sạch dữ liệu tự động thay thế quy trình thủ công.",
-        "Đạt chứng chỉ AWS Certified Data Engineer và Databricks Spark Developer.",
-        "Phối hợp xây dựng dashboard giám sát dữ liệu nội bộ bằng Next.js."
-      ],
-      color: "yellow"
     }
   ] as ExperienceItem[],
   assemblySteps: [
