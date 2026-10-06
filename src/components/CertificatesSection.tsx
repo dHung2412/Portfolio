@@ -91,10 +91,12 @@ export function CertificatesSection() {
                       Đơn vị cấp: {cert.issuer}
                     </div>
 
-                    {/* Certificate Name */}
-                    <h3 className="text-base font-black text-black uppercase leading-snug mb-3">
-                      {cert.name}
-                    </h3>
+                    {/* Certificate Name with fixed height for even alignment */}
+                    <div className="min-h-[72px] flex items-start mb-3">
+                      <h3 className="text-base font-black text-black uppercase leading-snug">
+                        {cert.name}
+                      </h3>
+                    </div>
 
                     {/* Metadata Table */}
                     <div className="space-y-1.5 p-3 bg-neutral-50 border-2 border-black text-xs font-mono">
