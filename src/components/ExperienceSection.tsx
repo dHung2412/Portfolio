@@ -100,7 +100,7 @@ export function ExperienceSection() {
                   <div className="space-y-2 pt-2 border-t border-neutral-200">
                     <div className="text-xs font-mono font-bold uppercase text-neutral-600 flex items-center gap-1.5">
                       <Award className="w-3.5 h-3.5 text-black" />
-                      <span>Kết quả định lượng:</span>
+                      <span>Đóng góp thực tế:</span>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
