@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { portfolioData, CertificateItem } from "@/data/portfolioData";
 import { LegoStudRow } from "./LegoStudRow";
 import { LegoButton } from "./LegoButton";
-import { Award, CheckCircle, ExternalLink, Calendar, Hash, ShieldCheck } from "lucide-react";
+import { Award, ExternalLink, Calendar, ShieldCheck } from "lucide-react";
 
 export function CertificatesSection() {
   const { certificates } = portfolioData;
@@ -75,9 +76,11 @@ export function CertificatesSection() {
                     {/* Badge Image Display */}
                     {cert.badgeImage && (
                       <div className="flex items-center justify-center p-3 mb-3 bg-neutral-100 border-2 border-black shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]">
-                        <img
+                        <Image
                           src={cert.badgeImage}
                           alt={cert.name}
+                          width={128}
+                          height={128}
                           className="w-32 h-32 object-contain drop-shadow-[4px_4px_0px_rgba(0,0,0,0.9)] transition-transform hover:scale-105"
                         />
                       </div>
@@ -96,16 +99,9 @@ export function CertificatesSection() {
                     {/* Metadata Table */}
                     <div className="space-y-1.5 p-3 bg-neutral-50 border-2 border-black text-xs font-mono">
                       <div className="flex items-center justify-between">
-                        <span className="text-neutral-600 flex items-center gap-1">
-                          <Hash className="w-3 h-3" />
-                          <span>Mã chứng chỉ:</span>
-                        </span>
-                        <span className="font-bold text-black">{cert.credentialId}</span>
-                      </div>
-                      <div className="flex items-center justify-between border-t border-neutral-200 pt-1">
-                        <span className="text-neutral-600 flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          <span>Năm cấp:</span>
+                        <span className="text-neutral-600 flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          <span>Ngày cấp:</span>
                         </span>
                         <span className="font-bold text-black">{cert.issuedDate}</span>
                       </div>
@@ -115,24 +111,6 @@ export function CertificatesSection() {
                           <span className="font-bold text-black">{cert.expiryDate}</span>
                         </div>
                       )}
-                    </div>
-
-                    {/* Skills Covered */}
-                    <div className="mt-4">
-                      <div className="text-[11px] font-mono font-bold uppercase text-neutral-600 mb-1.5 flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3 text-[#00852B]" />
-                        <span>Kỹ năng được kiểm chứng:</span>
-                      </div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {cert.skillsCovered.map((skill, sIdx) => (
-                          <span
-                            key={sIdx}
-                            className="px-2 py-0.5 text-[11px] font-mono font-bold bg-neutral-100 text-neutral-800 border border-black shadow-[1px_1px_0px_#000000]"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </div>
 
