@@ -98,29 +98,6 @@ export function HeroSection() {
                 <span>Quy Trình Pipeline</span>
               </LegoButton>
             </div>
-
-            {/* Tech Stack Indicator Bricks */}
-            <div className="pt-4 border-t-2 border-black/20">
-              <span className="text-xs font-bold font-mono uppercase text-neutral-700 block mb-2">
-                Hạ tầng công nghệ trọng tâm:
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: "Python & PySpark", bg: "bg-[#0055BF] text-white" },
-                  { name: "SQL & Data Modeling", bg: "bg-[#00852B] text-white" },
-                  { name: "Apache Airflow & dbt", bg: "bg-[#FE8A18] text-white" },
-                  { name: "AWS S3 / Athena / Glue", bg: "bg-[#D01012] text-white" },
-                  { name: "Next.js 15 & Amplify", bg: "bg-black text-white" },
-                ].map((item, idx) => (
-                  <span
-                    key={idx}
-                    className={`px-2.5 py-1 text-xs font-mono font-bold border-2 border-black shadow-[2px_2px_0px_#000000] ${item.bg}`}
-                  >
-                    {item.name}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Minifig Avatar Display */}
