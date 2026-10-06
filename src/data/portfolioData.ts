@@ -75,7 +75,7 @@ export const portfolioData = {
       credentialUrl: "https://certificates.confluent.io/5b275965-5bab-4c30-ad21-0ad69415d055#acc.3GVHkFqa",
       badgeNumber: "CERT #CONFLUENT-02",
       badgeImage: "/certificates/data-streaming-flink-badge.png",
-      color: "red",
+      color: "blue",
     },
   ] as CertificateItem[],
   skills: [
