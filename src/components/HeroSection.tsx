@@ -56,9 +56,6 @@ export function HeroSection() {
 
             {/* Main Title */}
             <div className="space-y-2">
-              <div className="text-xs font-mono font-bold uppercase tracking-widest text-neutral-600">
-                PORTFOLIO HỒ SƠ NĂNG LỰC CÁ NHÂN
-              </div>
               <h1 className="text-3xl sm:text-5xl font-black text-black tracking-tight uppercase leading-tight">
                 {profile.name}
               </h1>
