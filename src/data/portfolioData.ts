@@ -52,9 +52,9 @@ export const portfolioData = {
     completedProjects: 8,
     cloudCertifications: 2,
     bio: "... (Khu vực nội dung giới thiệu bản thân: Bạn có thể điền thông tin chi tiết về định hướng nghề nghiệp, quá trình học tập và thế mạnh kỹ thuật tại đây trong file src/data/portfolioData.ts)",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "contact@example.com",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/hưng-đặng-09423a352",
+    email: "danghung241204@gmail.com",
   },
   certificates: [
     {

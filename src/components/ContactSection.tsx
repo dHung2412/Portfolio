@@ -5,7 +5,7 @@ import { portfolioData } from "@/data/portfolioData";
 import { LegoButton } from "./LegoButton";
 import { LegoCard } from "./LegoCard";
 import { Send, Mail, MapPin, CheckCircle, MessageSquare } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./SocialIcons";
+import { LinkedinIcon } from "./SocialIcons";
 
 export function ContactSection() {
   const { profile } = portfolioData;
@@ -47,7 +47,7 @@ export function ContactSection() {
           <div className="lg:col-span-5 space-y-5">
             <LegoCard
               headerColor="blue"
-              title="Thông Tin Kỹ Thuật Viên"
+              title="Thông Tin Kỹ Thuật"
               badge="DIRECT CONTACT"
             >
               <div className="space-y-4">
@@ -81,44 +81,22 @@ export function ContactSection() {
                 {/* Social Links */}
                 <div className="pt-2">
                   <div className="text-xs font-mono font-bold uppercase text-neutral-700 mb-2">
-                    Các liên kết mã nguồn & hồ sơ:
+                    Hồ sơ mạng xã hội:
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <LegoButton
-                      variant="black"
-                      size="sm"
-                      href={profile.github}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <GithubIcon className="w-3.5 h-3.5" />
-                      <span>GitHub</span>
-                    </LegoButton>
-
-                    <LegoButton
-                      variant="blue"
-                      size="sm"
-                      href={profile.linkedin}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <LinkedinIcon className="w-3.5 h-3.5" />
-                      <span>LinkedIn</span>
-                    </LegoButton>
-                  </div>
+                  <LegoButton
+                    variant="blue"
+                    size="sm"
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full"
+                  >
+                    <LinkedinIcon className="w-3.5 h-3.5" />
+                    <span>Hồ Sơ LinkedIn</span>
+                  </LegoButton>
                 </div>
               </div>
             </LegoCard>
-
-            {/* AWS Hosting Notice */}
-            <div className="p-4 bg-[#1E1E1E] text-white border-3 border-black shadow-[4px_4px_0px_#000000]">
-              <div className="text-xs font-mono font-bold text-[#FE8A18] uppercase mb-1">
-                Hạ tầng triển khai:
-              </div>
-              <p className="text-xs text-neutral-300 leading-relaxed font-mono">
-                Ứng dụng này được xây dựng bằng Next.js 15 và cấu hình xuất bản tự động trên AWS Amplify Hosting thông qua file amplify.yml.
-              </p>
-            </div>
           </div>
 
           {/* Right Column: Contact Form */}
