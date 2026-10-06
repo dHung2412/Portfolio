@@ -50,7 +50,7 @@ export const portfolioData = {
     status: "Đang tìm kiếm cơ hội mới",
     location: "Hà Nội, Việt Nam",
     experienceYears: 1,
-    completedProjects: 8,
+    completedProjects: 3,
     cloudCertifications: 2,
     bio: "... (Khu vực nội dung giới thiệu bản thân: Bạn có thể điền thông tin chi tiết về định hướng nghề nghiệp, quá trình học tập và thế mạnh kỹ thuật tại đây trong file src/data/portfolioData.ts)",
     github: "",

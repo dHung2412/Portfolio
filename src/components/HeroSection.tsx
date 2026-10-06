@@ -17,8 +17,8 @@ export function HeroSection() {
       icon: Layers,
     },
     {
-      label: "Dự án đã bàn giao",
-      value: `${profile.completedProjects}+ Hệ thống`,
+      label: "Hệ thống đã bàn giao",
+      value: `${profile.completedProjects} Hệ thống`,
       color: "bg-[#F5CD2F] text-black",
       icon: Server,
     },
