@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { LegoStudRow } from "./LegoStudRow";
-import { Menu, X, Cloud } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,13 +57,6 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* AWS Amplify Status Badge */}
-          <div className="hidden sm:flex items-center gap-2 bg-[#1E1E1E] text-white px-3 py-1.5 border-2 border-black rounded-sm shadow-[2px_2px_0px_#000000]">
-            <Cloud className="w-4 h-4 text-[#FE8A18]" />
-            <span className="text-[11px] font-mono font-bold">AWS Amplify Gen 2</span>
-            <span className="w-2 h-2 rounded-full bg-[#00852B] animate-pulse" />
-          </div>
-
           {/* Mobile menu button */}
           <div className="flex lg:hidden">
             <button
@@ -91,10 +84,6 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-2 bg-[#1E1E1E] text-white px-3 py-2 border-2 border-black mt-2">
-            <Cloud className="w-4 h-4 text-[#FE8A18]" />
-            <span className="text-xs font-mono">Trạng thái: AWS Amplify Sẵn sàng</span>
-          </div>
         </div>
       )}
     </header>
