@@ -13,7 +13,6 @@ export function Navbar() {
     { href: "#certificates", label: "Chứng Chỉ (Certificates)" },
     { href: "#projects", label: "Bộ Mô Hình (Projects)" },
     { href: "#experience", label: "Tiến Trình (Timeline)" },
-    { href: "#builder", label: "Bàn Thử Nghiệm" },
     { href: "#contact", label: "Liên Hệ" },
   ];
 
