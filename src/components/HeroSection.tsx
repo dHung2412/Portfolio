@@ -4,7 +4,7 @@ import React from "react";
 import { MinifigAvatar } from "./MinifigAvatar";
 import { LegoButton } from "./LegoButton";
 import { portfolioData } from "@/data/portfolioData";
-import { FileText, Send, Layers, Server, ShieldCheck, Cpu, Award } from "lucide-react";
+import { FileText, Send, Layers, Server, ShieldCheck, Award } from "lucide-react";
 
 export function HeroSection() {
   const { profile } = portfolioData;
@@ -27,12 +27,6 @@ export function HeroSection() {
       value: `${portfolioData.certificates.length} Chứng nhận`,
       color: "bg-[#0055BF] text-white",
       icon: ShieldCheck,
-    },
-    {
-      label: "Kiến trúc dữ liệu",
-      value: "Lakehouse / ETL",
-      color: "bg-[#00852B] text-white",
-      icon: Cpu,
     },
   ];
 
@@ -105,8 +99,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Stats Grid - 4 Lego Bricks */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        {/* Stats Grid - 3 Lego Bricks */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
           {stats.map((stat, idx) => {
             const IconComponent = stat.icon;
             return (
