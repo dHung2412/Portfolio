@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-lego-sans: "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --lego-red: #D01012;
+  --lego-blue: #0055BF;
+  --lego-yellow: #F5CD2F;
+  --lego-green: #00852B;
+  --lego-orange: #FE8A18;
+  --lego-black: #111111;
+  --lego-white: #FFFFFF;
+  --lego-gray: #A0A5A9;
+  --lego-darkgray: #3A3D40;
+  --lego-plate: #438938;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ece8df;
+  color: #111111;
+  font-family: var(--font-lego-sans);
+  overflow-x: hidden;
+}
+
+/* Lego Baseplate Grid Patterns */
+.lego-baseplate-bg {
+  background-color: #3b7c32;
+  background-image: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.3) 15%, rgba(0, 0, 0, 0.35) 36%, transparent 42%);
+  background-size: 28px 28px;
+}
+
+.lego-neutral-bg {
+  background-color: #ece8df;
+  background-image: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.8) 14%, rgba(0, 0, 0, 0.08) 32%, transparent 40%);
+  background-size: 26px 26px;
+}
+
+.lego-dark-bg {
+  background-color: #1c2127;
+  background-image: radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.15) 15%, rgba(0, 0, 0, 0.6) 36%, transparent 42%);
+  background-size: 28px 28px;
+}
+
+/* Lego Brick Shadow Utilities */
+.lego-shadow-sm {
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.lego-shadow-md {
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.lego-shadow-lg {
+  box-shadow: 7px 7px 0px #000000;
+}
+
+/* Lego Plastic Top Highlight & Bottom Inset */
+.lego-plastic {
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.4), inset 0 -3px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Lego Stud Cylinder */
+.lego-stud-dot {
+  position: relative;
+  border-radius: 9999px;
+  border: 2px solid #000000;
+  background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(0, 0, 0, 0.3) 100%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7), inset 0 -1px 2px rgba(0, 0, 0, 0.4), 0 2px 0px rgba(0, 0, 0, 0.8);
 }
