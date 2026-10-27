@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export type LegoColor = "red" | "blue" | "yellow" | "green" | "orange" | "black" | "white";
+export type LegoColor = "red" | "blue" | "yellow" | "green" | "orange" | "black" | "white" | "gray";
 
 interface LegoButtonProps {
   children: React.ReactNode;
@@ -28,6 +28,7 @@ const colorStyles: Record<
   orange: { bg: "bg-[#FE8A18] hover:bg-[#E0760E]", text: "text-white", hex: "#FE8A18" },
   black: { bg: "bg-[#1E1E1E] hover:bg-[#111111]", text: "text-white", hex: "#1E1E1E" },
   white: { bg: "bg-[#FFFFFF] hover:bg-[#F0F0F0]", text: "text-black", hex: "#FFFFFF" },
+  gray: { bg: "bg-[#A0A5A9] hover:bg-[#8E9397]", text: "text-black", hex: "#A0A5A9" },
 };
 
 const sizeStyles = {

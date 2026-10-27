@@ -19,6 +19,7 @@ export function CertificatesSection() {
     yellow: { bg: "bg-[#F5CD2F]", text: "text-black", hex: "#F5CD2F" },
     green: { bg: "bg-[#00852B]", text: "text-white", hex: "#00852B" },
     orange: { bg: "bg-[#FE8A18]", text: "text-white", hex: "#FE8A18" },
+    gray: { bg: "bg-[#A0A5A9]", text: "text-black", hex: "#A0A5A9" },
   };
 
   return (

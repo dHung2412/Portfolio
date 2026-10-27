@@ -19,6 +19,7 @@ const colorHexValues: Record<LegoColor, { bg: string; text: string; hex: string 
   orange: { bg: "bg-[#FE8A18]", text: "text-white", hex: "#FE8A18" },
   black: { bg: "bg-[#1E1E1E]", text: "text-white", hex: "#1E1E1E" },
   white: { bg: "bg-[#FFFFFF]", text: "text-black", hex: "#FFFFFF" },
+  gray: { bg: "bg-[#A0A5A9]", text: "text-black", hex: "#A0A5A9" },
 };
 
 const initialBricks: BrickBlock[] = [

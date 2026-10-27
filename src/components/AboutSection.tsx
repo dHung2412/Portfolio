@@ -1,32 +1,32 @@
 "use client";
 
 import React from "react";
-import { Box, Cpu, Workflow, ShieldCheck } from "lucide-react";
+import { Database, Cloud, Workflow, Activity } from "lucide-react";
 
 export function AboutSection() {
   const principles = [
     {
-      title: "Kiến Trúc Module Hóa",
-      desc: "Tách biệt rõ ràng giữa tầng hiển thị UI, logic nghiệp vụ và tầng truy vấn dữ liệu.",
-      icon: Box,
+      title: "Chất Lượng Dữ Liệu",
+      desc: "Đảm bảo dữ liệu đúng, đủ, sạch: nền tảng tin cậy cho phân tích và AI Agent.",
+      icon: Database,
       color: "border-[#D01012] bg-red-50",
     },
     {
-      title: "An Toàn Kiểu Dữ Liệu",
-      desc: "Áp dụng TypeScript kiểm soát kiểu dữ liệu từ API contract đến client component.",
-      icon: ShieldCheck,
+      title: "Tối Ưu Chi Phí Cloud",
+      desc: "Chọn đúng tài nguyên, lưu trữ theo vòng đời dữ liệu và tắt những gì không dùng.",
+      icon: Cloud,
       color: "border-[#0055BF] bg-blue-50",
     },
     {
-      title: "Tối Ưu Điện Toán Đám Mây",
-      desc: "Sử dụng tài nguyên serverless trên AWS nhằm tự động co giãn và kiểm soát chi phí vận hành.",
-      icon: Cpu,
+      title: "Tự Động Hóa",
+      desc: "Tự động hóa pipeline, kiểm thử và triển khai để giảm thao tác thủ công và lỗi con người.",
+      icon: Workflow,
       color: "border-[#00852B] bg-green-50",
     },
     {
-      title: "Tự Động Hóa CI/CD",
-      desc: "Thiết lập pipeline kiểm thử và xuất bản tự động qua GitHub Actions và AWS Amplify Hosting.",
-      icon: Workflow,
+      title: "Vận Hành Ổn Định",
+      desc: "Giám sát và cảnh báo để hệ thống chạy chính xác, liên tục tối ưu sau khi đưa vào vận hành.",
+      icon: Activity,
       color: "border-[#FE8A18] bg-orange-50",
     },
   ];

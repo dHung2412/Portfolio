@@ -38,7 +38,7 @@ export interface CertificateItem {
   credentialUrl?: string;
   badgeNumber: string;
   badgeImage?: string;
-  color: "red" | "blue" | "yellow" | "green" | "orange";
+  color: "red" | "blue" | "yellow" | "green" | "orange" | "gray";
   skillsCovered?: string[];
 }
 
@@ -59,6 +59,16 @@ export const portfolioData = {
   },
   certificates: [
     {
+      id: "cert-aws-01",
+      name: "AWS Certified Solutions Architect - Associate (SAA-C03)",
+      issuer: "Amazon Web Services",
+      issuedDate: "19 tháng 10, 2026",
+      credentialUrl: "/certificates/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20certificate.pdf",
+      badgeNumber: "CERT #AWS-SAA-C03",
+      badgeImage: "/certificates/aws-saa-c03-badge.png",
+      color: "blue",
+    },
+    {
       id: "cert-confluent-01",
       name: "Confluent Certified: Data Streaming Engineer Foundations",
       issuer: "Confluent",
@@ -66,7 +76,7 @@ export const portfolioData = {
       credentialUrl: "https://certificates.confluent.io/3faf7532-2d67-4e8d-8518-5d0546a245c5#acc.B56dXfK4",
       badgeNumber: "CERT #CONFLUENT-01",
       badgeImage: "/certificates/data-streaming-badge.png",
-      color: "blue",
+      color: "gray",
     },
     {
       id: "cert-confluent-02",
@@ -76,17 +86,7 @@ export const portfolioData = {
       credentialUrl: "https://certificates.confluent.io/5b275965-5bab-4c30-ad21-0ad69415d055#acc.3GVHkFqa",
       badgeNumber: "CERT #CONFLUENT-02",
       badgeImage: "/certificates/data-streaming-flink-badge.png",
-      color: "blue",
-    },
-    {
-      id: "cert-aws-01",
-      name: "AWS Certified Solutions Architect - Associate (SAA-C03)",
-      issuer: "Amazon Web Services",
-      issuedDate: "19 tháng 10, 2026",
-      credentialUrl: "/certificates/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20certificate.pdf",
-      badgeNumber: "CERT #AWS-SAA-C03",
-      badgeImage: "/certificates/aws-saa-c03-badge.png",
-      color: "orange",
+      color: "gray",
     },
   ] as CertificateItem[],
   skills: [
