@@ -66,3 +66,87 @@ body {
   background: radial-gradient(circle at 40% 35%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(0, 0, 0, 0.3) 100%);
   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7), inset 0 -1px 2px rgba(0, 0, 0, 0.4), 0 2px 0px rgba(0, 0, 0, 0.8);
 }
+
+/* Cylindrical Lego Stud (side view: top cap + shaded wall) */
+.lego-stud-row {
+  --stud-w: 18px;
+  --stud-h: 5px;
+  --stud-cap: 8px;
+  padding-top: calc(var(--stud-cap) / 2);
+}
+
+.lego-stud-row[data-size="md"] {
+  --stud-w: 24px;
+  --stud-h: 7px;
+  --stud-cap: 10px;
+}
+
+.lego-stud-row[data-size="lg"] {
+  --stud-w: 32px;
+  --stud-h: 9px;
+  --stud-cap: 13px;
+}
+
+.lego-stud {
+  position: relative;
+  width: var(--stud-w);
+  height: var(--stud-h);
+  border: 2px solid #000000;
+  border-top: none;
+  border-radius: 0 0 50% 50% / 0 0 calc(var(--stud-cap) / 2) calc(var(--stud-cap) / 2);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--stud) 55%, #000) 0%,
+    var(--stud) 30%,
+    color-mix(in srgb, var(--stud) 70%, #fff) 45%,
+    var(--stud) 60%,
+    color-mix(in srgb, var(--stud) 60%, #000) 100%
+  );
+}
+
+/* Top cap */
+.lego-stud::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: calc(var(--stud-cap) / -2);
+  height: var(--stud-cap);
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 35% 35%,
+    color-mix(in srgb, var(--stud) 45%, #fff) 0%,
+    var(--stud) 55%,
+    color-mix(in srgb, var(--stud) 80%, #000) 100%
+  );
+}
+
+/* Embossed logo ring on the cap */
+.lego-stud::after {
+  content: "";
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: calc(var(--stud-cap) / -2 + 2px + var(--stud-cap) * 0.18);
+  height: calc(var(--stud-cap) * 0.42);
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--stud) 70%, #000);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  opacity: 0.6;
+}
+
+/* Studs protruding above a brick's top edge */
+.lego-studs-top {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 1px);
+  z-index: 1;
+}
+
+/* Glossy ABS plastic sheen for a brick's colored top face */
+.lego-brick-top {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 55%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.35), inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+}

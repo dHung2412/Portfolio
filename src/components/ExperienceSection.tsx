@@ -45,16 +45,16 @@ export function ExperienceSection() {
             return (
               <div
                 key={index}
-                className="relative bg-white border-4 border-black rounded-sm shadow-[6px_6px_0px_#000000]"
+                className="relative bg-white mt-3 border-4 border-black rounded-md shadow-[6px_6px_0px_#000000]"
               >
                 {/* Top Studs Row */}
-                <div className="w-full bg-neutral-900 pt-1 pb-1 border-b-3 border-black">
+                <div className="lego-studs-top">
                   <LegoStudRow count={8} colorHex={hex} size="sm" />
                 </div>
 
                 {/* Header bar */}
                 <div
-                  className={`flex flex-col sm:flex-row sm:items-center justify-between px-5 py-3 border-b-3 border-black ${bg} ${text} gap-2`}
+                  className={`flex flex-col sm:flex-row sm:items-center justify-between px-5 py-3 border-b-3 border-black lego-brick-top ${bg} ${text} gap-2`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="font-black text-base sm:text-lg uppercase">

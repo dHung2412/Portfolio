@@ -34,11 +34,11 @@ export function ContactSection() {
               <span>KÊNH TIẾP NHẬN THÔNG TIN</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-black text-black uppercase tracking-tight">
-              Liên Hệ & Trao Đổi Kỹ Thuật
+              Liên Hệ
             </h2>
           </div>
           <div className="mt-2 sm:mt-0 text-xs font-mono font-bold text-neutral-700">
-            PHẢN HỒI TRONG 24H LÀM VIỆC
+            Phản hồi trong 17h - 22h
           </div>
         </div>
 
@@ -47,42 +47,28 @@ export function ContactSection() {
           <div className="lg:col-span-5 space-y-5">
             <LegoCard
               headerColor="blue"
-              title="Thông Tin Kỹ Thuật"
-              badge="DIRECT CONTACT"
+              title="DIRECT CONTACT"
             >
               <div className="space-y-4">
-                <div className="flex items-start gap-3 p-3 bg-neutral-50 border-2 border-black">
-                  <Mail className="w-5 h-5 text-[#D01012] mt-0.5 shrink-0" />
-                  <div>
-                    <div className="text-[11px] font-mono font-bold uppercase text-neutral-600">
-                      Địa chỉ Hòm thư điện tử:
-                    </div>
-                    <a
-                      href={`mailto:${profile.email}`}
-                      className="text-sm font-bold text-black hover:underline"
-                    >
-                      {profile.email}
-                    </a>
-                  </div>
+                <div className="flex items-center gap-3 p-3 bg-neutral-50 border-2 border-black">
+                  <Mail className="w-5 h-5 text-[#D01012] shrink-0" />
+                  <a
+                    href={`mailto:${profile.email}`}
+                    className="text-sm font-bold text-black hover:underline break-all"
+                  >
+                    {profile.email}
+                  </a>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 bg-neutral-50 border-2 border-black">
-                  <MapPin className="w-5 h-5 text-[#00852B] mt-0.5 shrink-0" />
-                  <div>
-                    <div className="text-[11px] font-mono font-bold uppercase text-neutral-600">
-                      Khu vực làm việc:
-                    </div>
-                    <div className="text-sm font-bold text-black">
-                      {profile.location}
-                    </div>
+                <div className="flex items-center gap-3 p-3 bg-neutral-50 border-2 border-black">
+                  <MapPin className="w-5 h-5 text-[#00852B] shrink-0" />
+                  <div className="text-sm font-bold text-black">
+                    {profile.location}
                   </div>
                 </div>
 
                 {/* Social Links */}
                 <div className="pt-2">
-                  <div className="text-xs font-mono font-bold uppercase text-neutral-700 mb-2">
-                    Hồ sơ mạng xã hội:
-                  </div>
                   <LegoButton
                     variant="blue"
                     size="sm"
@@ -132,8 +118,8 @@ export function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-neutral-800 mb-1">
-                        Họ và tên người gửi: *
+                      <label className="block text-xs font-mono font-black uppercase text-black mb-1">
+                        Họ và tên: *
                       </label>
                       <input
                         type="text"
@@ -148,8 +134,8 @@ export function ContactSection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-bold uppercase text-neutral-800 mb-1">
-                        Địa chỉ Email liên hệ: *
+                      <label className="block text-xs font-mono font-black uppercase text-black mb-1">
+                        Địa chỉ Email: *
                       </label>
                       <input
                         type="email"
@@ -165,7 +151,7 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono font-bold uppercase text-neutral-800 mb-1">
+                    <label className="block text-xs font-mono font-black uppercase text-black mb-1">
                       Chủ đề công việc / dự án:
                     </label>
                     <input
@@ -180,7 +166,7 @@ export function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono font-bold uppercase text-neutral-800 mb-1">
+                    <label className="block text-xs font-mono font-black uppercase text-black mb-1">
                       Nội dung chi tiết: *
                     </label>
                     <textarea
@@ -195,7 +181,7 @@ export function ContactSection() {
                     />
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-2 flex justify-end">
                     <LegoButton
                       variant="red"
                       size="md"
@@ -203,7 +189,7 @@ export function ContactSection() {
                       className="w-full sm:w-auto"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Xác Nhận Gửi Tin Nhắn</span>
+                      <span>Send</span>
                     </LegoButton>
                   </div>
                 </form>

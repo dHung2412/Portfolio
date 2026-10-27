@@ -55,10 +55,11 @@ export function LegoButton({
     relative inline-flex items-center justify-center gap-2
     border-3 border-black rounded-sm
     ${bg} ${text} ${sizeClass}
-    shadow-[4px_4px_0px_#000000]
+    bg-[linear-gradient(180deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_55%)]
+    shadow-[inset_0_2px_0_rgba(255,255,255,0.4),inset_0_-3px_0_rgba(0,0,0,0.2),4px_4px_0px_#000000]
     transition-all duration-100 ease-in-out
-    hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_#000000]
-    active:translate-x-1 active:translate-y-1 active:shadow-[1px_1px_0px_#000000]
+    hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[inset_0_2px_0_rgba(255,255,255,0.4),inset_0_-3px_0_rgba(0,0,0,0.2),5px_5px_0px_#000000]
+    active:translate-x-1 active:translate-y-1 active:shadow-[inset_0_2px_0_rgba(255,255,255,0.25),inset_0_-1px_0_rgba(0,0,0,0.2),1px_1px_0px_#000000]
     disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-[2px_2px_0px_#000000]
     select-none uppercase cursor-pointer
     ${className}

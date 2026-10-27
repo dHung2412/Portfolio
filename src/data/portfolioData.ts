@@ -44,14 +44,14 @@ export interface CertificateItem {
 
 export const portfolioData = {
   profile: {
-    name: "Đặng Ngọc Hưng (Deck)",
-    role: "Data Platform Engineer",
+    name: "Đặng Ngọc Hưng",
+    role: "Data Engineer",
     tagline: "Thiết kế, triển khai và vận hành hạ tầng dữ liệu, pipeline ETL/ELT và nền tảng phân tích đám mây.",
-    status: "Đang tìm kiếm cơ hội mới",
-    location: "Hà Nội, Việt Nam",
+    status: "Looking for work",
+    location: "Ha Noi, Viet Nam",
     experienceYears: 1,
-    completedProjects: 3,
-    cloudCertifications: 2,
+    completedProjects: 4,
+    cloudCertifications: 3,
     bio: "... (Khu vực nội dung giới thiệu bản thân: Bạn có thể điền thông tin chi tiết về định hướng nghề nghiệp, quá trình học tập và thế mạnh kỹ thuật tại đây trong file src/data/portfolioData.ts)",
     github: "",
     linkedin: "https://www.linkedin.com/in/hưng-đặng-09423a352",
@@ -77,6 +77,16 @@ export const portfolioData = {
       badgeNumber: "CERT #CONFLUENT-02",
       badgeImage: "/certificates/data-streaming-flink-badge.png",
       color: "blue",
+    },
+    {
+      id: "cert-aws-01",
+      name: "AWS Certified Solutions Architect - Associate (SAA-C03)",
+      issuer: "Amazon Web Services",
+      issuedDate: "19 tháng 10, 2026",
+      credentialUrl: "/certificates/AWS%20Certified%20Solutions%20Architect%20-%20Associate%20certificate.pdf",
+      badgeNumber: "CERT #AWS-SAA-C03",
+      badgeImage: "/certificates/aws-saa-c03-badge.png",
+      color: "orange",
     },
   ] as CertificateItem[],
   skills: [
@@ -106,68 +116,21 @@ export const portfolioData = {
     { name: "Terraform (IaC)", category: "tools", level: 2, color: "green" },
   ] as SkillItem[],
   projects: [
+    // Template: duplicate this object for each real project
     {
       id: "set-01",
-      setNumber: "SET #1021",
-      title: "Hạ Tầng Lakehouse & Pipeline Xử Lý Dữ Liệu Tự Động",
-      description: "Hệ thống thu thập dữ liệu đa nguồn, chuẩn hóa và lưu trữ theo định dạng Parquet/Delta Lake trên Amazon S3 điều phối bằng Apache Airflow.",
-      piecesCount: 420,
-      tags: ["Python", "Apache Spark", "AWS S3", "Airflow", "Delta Lake"],
-      demoUrl: "https://example.com/demo1",
-      githubUrl: "https://github.com/example/data-lakehouse",
+      setNumber: "SET #0001",
+      title: "Tên dự án",
+      description: "Mô tả ngắn gọn bài toán, giải pháp và kết quả của dự án.",
+      piecesCount: 0,
+      tags: ["Python", "Apache Spark", "Airflow"],
+      // demoUrl: "https://...",
+      // githubUrl: "https://github.com/dHung2412/...",
       color: "blue",
       highlights: [
-        "Xử lý hơn 5 triệu bản ghi giao dịch mỗi ngày với Spark batch jobs.",
-        "Thiết lập cơ chế kiểm tra chất lượng dữ liệu (Data Quality Checks) qua Great Expectations.",
-        "Tối ưu chi phí lưu trữ S3 Lifecycle Policies."
-      ]
-    },
-    {
-      id: "set-02",
-      setNumber: "SET #2045",
-      title: "Hệ Thống Phân Tích Dữ Liệu Thời Gian Thực",
-      description: "Pipeline xử lý luồng dữ liệu log hệ thống và sự kiện người dùng sử dụng AWS Lambda, Kinesis Data Streams và lưu trữ trên AWS OpenSearch.",
-      piecesCount: 310,
-      tags: ["AWS Lambda", "Kinesis", "Python", "OpenSearch", "CloudWatch"],
-      demoUrl: "https://example.com/demo2",
-      githubUrl: "https://github.com/example/realtime-pipeline",
-      color: "red",
-      highlights: [
-        "Độ trễ xử lý luồng sự kiện dưới 1.5 giây từ nguồn phát.",
-        "Thiết lập cảnh báo tự động qua Amazon SNS khi phát hiện dữ liệu dị biệt.",
-        "Quản lý hạ tầng bằng mã nguồn Terraform."
-      ]
-    },
-    {
-      id: "set-03",
-      setNumber: "SET #3089",
-      title: "Data Mart & Báo Cáo Phân Tích với dbt & PostgreSQL",
-      description: "Mô hình hóa dữ liệu dạng Star Schema phục vụ báo cáo BI doanh nghiệp, tự động hóa kiểm thử tính toàn vẹn dữ liệu.",
-      piecesCount: 280,
-      tags: ["dbt", "PostgreSQL", "SQL", "Metabase", "GitHub Actions"],
-      demoUrl: "https://example.com/demo3",
-      githubUrl: "https://github.com/example/dbt-analytics",
-      color: "yellow",
-      highlights: [
-        "Xây dựng hơn 30 data models phục vụ phân tích các chỉ số doanh thu và retention.",
-        "Tích hợp dbt test vào pipeline CI/CD trước khi cập nhật dữ liệu sản xuất.",
-        "Tự động sinh tài liệu Data Catalog và Data Lineage."
-      ]
-    },
-    {
-      id: "set-04",
-      setNumber: "SET #4012",
-      title: "Cổng Quản Trị & Giám Sát Dữ Liệu Nội Bộ",
-      description: "Ứng dụng web nội bộ cho phép đội ngũ phân tích theo dõi trạng thái các luồng dữ liệu (Data Pipelines) và tra cứu siêu dữ liệu (Metadata).",
-      piecesCount: 350,
-      tags: ["Next.js", "TypeScript", "AWS Amplify", "Tailwind CSS", "FastAPI"],
-      demoUrl: "https://example.com/demo4",
-      githubUrl: "https://github.com/example/data-portal",
-      color: "green",
-      highlights: [
-        "Triển khai trên AWS Amplify Hosting với quy trình CI/CD tích hợp GitHub.",
-        "Giao diện trực quan hóa trạng thái DAG của Airflow qua REST API.",
-        "Xác thực người dùng nội bộ an toàn."
+        "Điểm nổi bật 1 của dự án.",
+        "Điểm nổi bật 2 của dự án.",
+        "Điểm nổi bật 3 của dự án."
       ]
     }
   ] as ProjectItem[],
@@ -185,27 +148,5 @@ export const portfolioData = {
       ],
       color: "blue"
     }
-  ] as ExperienceItem[],
-  assemblySteps: [
-    {
-      step: 1,
-      title: "Thu Thập Dữ Liệu (Data Ingestion)",
-      content: "Thu thập dữ liệu từ các hệ thống nguồn (RDBMS, NoSQL, API bên thứ ba, Event Logs) vào vùng lưu trữ thô (Raw / Bronze Zone) trên Amazon S3."
-    },
-    {
-      step: 2,
-      title: "Làm Sạch & Chuẩn Hóa (Processing & Transformation)",
-      content: "Sử dụng Apache Spark, PySpark và dbt để làm sạch, loại bỏ bản ghi lỗi, chuẩn hóa kiểu dữ liệu và chuyển đổi sang vùng Silver Zone."
-    },
-    {
-      step: 3,
-      title: "Mô Hình Hóa Dữ Liệu (Data Modeling / Gold Zone)",
-      content: "Tổ chức dữ liệu theo mô hình hình sao (Star Schema) hoặc Data Mart, phục vụ cho các truy vấn phân tích nghiệp vụ với độ trễ thấp."
-    },
-    {
-      step: 4,
-      title: "Giám Sát & Quản Trị (Governance & Monitoring)",
-      content: "Theo dõi trạng thái các luồng dữ liệu, kiểm soát chất lượng dữ liệu (Data Quality), và bảo mật truy cập dữ liệu theo vai trò."
-    }
-  ]
+  ] as ExperienceItem[]
 };

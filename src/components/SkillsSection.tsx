@@ -62,9 +62,6 @@ export function SkillsSection() {
               Kho Kỹ Năng & Công Nghệ
             </h2>
           </div>
-          <div className="mt-2 sm:mt-0 text-xs font-mono font-bold text-neutral-700">
-            TỔNG SỐ LINH KIỆN: {skills.length} MODULES
-          </div>
         </div>
 
         {/* Category Filters */}

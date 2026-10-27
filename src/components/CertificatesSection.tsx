@@ -48,16 +48,16 @@ export function CertificatesSection() {
             return (
               <div
                 key={cert.id}
-                className="flex flex-col bg-white border-4 border-black rounded-sm shadow-[6px_6px_0px_#000000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] transition-all"
+                className="flex flex-col bg-white relative mt-3 border-4 border-black rounded-md shadow-[6px_6px_0px_#000000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] transition-all"
               >
                 {/* Top Studs Header */}
-                <div className="w-full bg-neutral-900 pt-1 pb-1 border-b-3 border-black">
+                <div className="lego-studs-top">
                   <LegoStudRow count={8} colorHex={conf.hex} size="sm" />
                 </div>
 
                 {/* Header Bar */}
                 <div
-                  className={`flex items-center justify-between px-4 py-2.5 border-b-3 border-black ${conf.bg} ${conf.text}`}
+                  className={`flex items-center justify-between px-4 py-2.5 border-b-3 border-black lego-brick-top ${conf.bg} ${conf.text}`}
                 >
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4" />
@@ -107,12 +107,6 @@ export function CertificatesSection() {
                         </span>
                         <span className="font-bold text-black">{cert.issuedDate}</span>
                       </div>
-                      {cert.expiryDate && (
-                        <div className="flex items-center justify-between border-t border-neutral-200 pt-1">
-                          <span className="text-neutral-600">Hiệu lực đến:</span>
-                          <span className="font-bold text-black">{cert.expiryDate}</span>
-                        </div>
-                      )}
                     </div>
                   </div>
 

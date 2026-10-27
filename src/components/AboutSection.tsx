@@ -1,13 +1,9 @@
 "use client";
 
 import React from "react";
-import { LegoCard } from "./LegoCard";
-import { portfolioData } from "@/data/portfolioData";
-import { BookOpen, CheckCircle2, Box, Cpu, Workflow, ShieldCheck } from "lucide-react";
+import { Box, Cpu, Workflow, ShieldCheck } from "lucide-react";
 
 export function AboutSection() {
-  const { assemblySteps } = portfolioData;
-
   const principles = [
     {
       title: "Kiến Trúc Module Hóa",
@@ -38,53 +34,6 @@ export function AboutSection() {
   return (
     <section id="about" className="py-16 bg-[#e4dfd3] border-b-4 border-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 pb-4 border-b-3 border-black">
-          <div>
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-black text-[#F5CD2F] text-xs font-mono font-bold uppercase mb-2">
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>HỒ SƠ KỸ THUẬT</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-black text-black uppercase tracking-tight">
-              Sổ Tay Hướng Dẫn Kỹ Thuật (Manual #101)
-            </h2>
-          </div>
-          <div className="mt-2 sm:mt-0 text-xs font-mono font-bold text-neutral-700">
-            QUY TRÌNH PHÁT TRIỂN 4 GIAI ĐOẠN
-          </div>
-        </div>
-
-        {/* Assembly Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {assemblySteps.map((stepItem) => {
-            const colors = ["red", "yellow", "blue", "green"] as const;
-            const cardColor = colors[stepItem.step - 1] || "red";
-
-            return (
-              <LegoCard
-                key={stepItem.step}
-                headerColor={cardColor}
-                title={`BƯỚC 0${stepItem.step}`}
-                badge="STAGE"
-                className="h-full"
-              >
-                <div className="space-y-3">
-                  <h4 className="font-extrabold text-base text-neutral-900 leading-snug">
-                    {stepItem.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
-                    {stepItem.content}
-                  </p>
-                  <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-black border-t border-neutral-200">
-                    <CheckCircle2 className="w-4 h-4 text-[#00852B]" />
-                    <span>Tiêu chuẩn hoàn tất</span>
-                  </div>
-                </div>
-              </LegoCard>
-            );
-          })}
-        </div>
-
         {/* Principles Section */}
         <div className="bg-white border-4 border-black p-6 sm:p-8 shadow-[6px_6px_0px_#000000]">
           <h3 className="text-lg sm:text-xl font-black uppercase text-black mb-6 flex items-center gap-2">

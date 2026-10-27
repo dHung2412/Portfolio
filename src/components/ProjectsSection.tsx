@@ -57,11 +57,8 @@ export function ProjectsSection() {
               <span>HỆ THỐNG MÃ NGUỒN HOÀN THIỆN</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-black text-black uppercase tracking-tight">
-              Danh Mục Bộ Dự Án (Official Sets)
+              Personal Project
             </h2>
-          </div>
-          <div className="mt-2 sm:mt-0 text-xs font-mono font-bold text-neutral-700">
-            ĐÃ TRIỂN KHAI TRÊN CLOUD
           </div>
         </div>
 
@@ -73,16 +70,16 @@ export function ProjectsSection() {
             return (
               <div
                 key={project.id}
-                className="flex flex-col bg-white border-4 border-black rounded-sm shadow-[6px_6px_0px_#000000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] transition-all"
+                className="flex flex-col bg-white relative mt-3 border-4 border-black rounded-md shadow-[6px_6px_0px_#000000] hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] transition-all"
               >
                 {/* Top Studs Header */}
-                <div className="w-full bg-neutral-900 pt-1 pb-1 border-b-3 border-black">
+                <div className="lego-studs-top">
                   <LegoStudRow count={10} colorHex={colors.hex} size="sm" />
                 </div>
 
                 {/* Box Header Bar */}
                 <div
-                  className={`flex items-center justify-between px-5 py-3 border-b-3 border-black ${colors.bg} ${colors.text}`}
+                  className={`flex items-center justify-between px-5 py-3 border-b-3 border-black lego-brick-top ${colors.bg} ${colors.text}`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="font-mono font-black text-sm tracking-widest bg-black text-white px-2 py-0.5 border border-white">

@@ -37,17 +37,17 @@ export function LegoCard({
 
   return (
     <div
-      className={`relative flex flex-col bg-white border-4 border-black rounded-sm shadow-[6px_6px_0px_#000000] transition-all duration-150 hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] ${className}`}
+      className={`relative mt-3 flex flex-col bg-white border-4 border-black rounded-md shadow-[6px_6px_0px_#000000] transition-all duration-150 hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000000] ${className}`}
     >
-      {/* Top Studs Row positioned above card edge */}
-      <div className="w-full pt-1 pb-1 border-b-3 border-black bg-neutral-900 overflow-hidden">
+      {/* Top Studs Row protruding above card edge */}
+      <div className="lego-studs-top">
         <LegoStudRow count={studCount} colorHex={hex} size="sm" />
       </div>
 
       {/* Header Bar */}
       {(title || badge) && (
         <div
-          className={`flex items-center justify-between px-4 py-2.5 border-b-3 border-black ${bg} ${text}`}
+          className={`flex items-center justify-between px-4 py-2.5 border-b-3 border-black lego-brick-top ${bg} ${text}`}
         >
           {title && (
             <h3 className="font-extrabold text-sm md:text-base tracking-wide uppercase truncate">
